@@ -30,7 +30,6 @@ public class UserDaoImp implements UserDao {
         User user = session.createQuery("select  u from User u where u.car.model = :modelHql and u.car.series = :seriesHql", User.class)
                 .setParameter("modelHql", model)
                 .setParameter("seriesHql", series).uniqueResult();
-
         return user;
     }
 
